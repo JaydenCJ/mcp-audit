@@ -1,0 +1,68 @@
+{
+  "name": "mcp-audit",
+  "version": "0.1.0",
+  "description": "Open audit-log standard for the Model Context Protocol, with middleware and Splunk/Datadog/OTLP exporters",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./schema": "./schema/audit-event.schema.json"
+  },
+  "files": [
+    "dist",
+    "schema",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json && node scripts/copy-schema.mjs",
+    "test": "vitest run",
+    "clean": "rm -rf dist schema"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "audit",
+    "audit-log",
+    "siem",
+    "splunk",
+    "datadog",
+    "otel",
+    "opentelemetry",
+    "compliance"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JaydenCJ/mcp-audit.git",
+    "directory": "ts"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "peerDependencies": {
+    "@modelcontextprotocol/sdk": ">=1.10.0 <2"
+  },
+  "peerDependenciesMeta": {
+    "@modelcontextprotocol/sdk": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "@types/node": "^22.10.0",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "typescript": "^5.7.0",
+    "vitest": "^4.1.10",
+    "zod": "^3.25.0"
+  },
+  "homepage": "https://github.com/JaydenCJ/mcp-audit#readme",
+  "bugs": {
+    "url": "https://github.com/JaydenCJ/mcp-audit/issues"
+  }
+}

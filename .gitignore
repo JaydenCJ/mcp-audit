@@ -1,0 +1,49 @@
+# --- dependencies ---
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# --- build outputs ---
+build/
+dist/
+out/
+target/
+.build/
+.next/
+.turbo/
+*.tsbuildinfo
+
+# --- model weights & large artifacts (never commit) ---
+models/
+*.gguf
+*.onnx
+*.safetensors
+*.mlmodelc
+*.mlpackage
+
+# --- env & secrets ---
+.env
+.env.*
+!.env.example
+
+# --- caches / editor / OS ---
+.DS_Store
+.idea/
+.vscode/
+.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+coverage/
+*.log
+tmp/
+
+# --- runtime artifacts produced by examples / smoke ---
+audit.jsonl
+*.audit.jsonl
+
+# --- generated: schema copied into the npm package at build time ---
+ts/schema/

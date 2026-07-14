@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-audit"
+version = "0.1.0"
+description = "Open audit-log standard for the Model Context Protocol, with structured events and Splunk/Datadog/OTLP exporters"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "JaydenCJ" }]
+keywords = [
+  "mcp",
+  "model-context-protocol",
+  "audit",
+  "audit-log",
+  "siem",
+  "splunk",
+  "datadog",
+  "opentelemetry",
+  "compliance",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: System :: Logging",
+  "Topic :: Security",
+]
+
+# The test suite itself only uses the standard library
+# (`python3 -m unittest discover -s tests`); the `test` extra installs pytest
+# for contributors who prefer `pytest tests/` as a runner.
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[project.urls]
+Homepage = "https://github.com/JaydenCJ/mcp-audit"
+Repository = "https://github.com/JaydenCJ/mcp-audit"
+
+[tool.setuptools]
+packages = ["mcp_audit"]
